@@ -1,0 +1,3 @@
+irq	= $c04b	; ?
+music	= $1000
+music_play	= $1003
