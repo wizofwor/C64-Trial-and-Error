@@ -59,4 +59,8 @@ end	jmp $ea81
 	;Veriler
 
 	* = music
+<<<<<<< HEAD
 	!bin "LittleSecret-c000.sid",3298,$7c+2
+=======
+	!bin "Little Secret.sid",,$7c+2
+>>>>>>> fec83a84ec622e8c12ca5c12461bd907606dfab6
