@@ -1,3 +1,4 @@
-irq	= $c04b	; ?
-music	= $1000
-music_play	= $1003
+end	= $9f42	; unused
+irq	= $9f3c	; ?
+music	= $c000
+music_play	= $c003
