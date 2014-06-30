@@ -7,7 +7,7 @@
 	!by $0d,$08,$0a,$00,$9e,$34,$30,$37,$30,$34
     	
 	* = $9F00	 
-	rts
+	
 	lda #$03	 
 	sta $d020
 
@@ -53,14 +53,18 @@
 	;Muziği çalan irq rutini
 irq	inc $d019
         jsr music_play	;müziði çaldýrýyoruz
-end	jmp $ea81
+	jmp $ea31
 
 
 	;Veriler
+	;------------------------------------------------------------------------
+	; Sid player adresini sidreloc ile $c000 olarak değiştirdim.
+	; Zero page adreslerinide $fb-$fe arasına aldım.
+	;
+	; sidreloc -r 10-1c -p c0 -z fb-fe LittleSecret.sid LittleSecret-c000.sid
+	;
+	; http://www.linusakesson.net/software/sidreloc/
+	;-------------------------------------------------------------------------
 
 	* = music
-<<<<<<< HEAD
 	!bin "LittleSecret-c000.sid",3298,$7c+2
-=======
-	!bin "Little Secret.sid",,$7c+2
->>>>>>> fec83a84ec622e8c12ca5c12461bd907606dfab6
